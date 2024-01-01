@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react'
 
 function App() {
+
+  const [name, setName] = useState("Bilal")
+  const [age, setAge] = useState(22)
+  const [brands , setBrands] = useState(["Koenigsegg", "McLaren", "RAM"])
+
+  console.log(brands);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <h2>{name} {age}</h2>
+
+      <button onClick = {() => setName("Karahanlı")}>CHANGE NAME</button>
+      <br></br>
+      <button onClick = {() => setAge(29)}>CHANGE AGE</button>
+      <br></br>      <hr></hr>
+
+      <h2>{brands.map(
+        (brand, key) =>
+          <div key={key}>{brand}</div>
+      )}</h2>
+      <button onClick = {() => setBrands([...brands, "Lamborghini"])}>ADD BRAND</button>
+
     </div>
   );
 }
