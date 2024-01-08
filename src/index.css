@@ -1,4 +1,5 @@
 body {
+  background-color: rgb(100, 78, 27);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +11,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/*This className=Counter comes from the component function's return function's <div/>*/
+.Counter{
+  width: fit-content;
+  height: fit-content;
+  background-color: aqua;
+  box-sizing: content-box;
 }
