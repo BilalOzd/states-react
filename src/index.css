@@ -17,5 +17,6 @@ code {
 .Counter{
   width: fit-content;
   height: fit-content;
+  background-color: aqua;
   box-sizing: content-box;
 }
